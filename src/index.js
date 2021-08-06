@@ -4,14 +4,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import StoreContext from './storeContext';
 
 let rerenderEntireTree = (state) => {
   ReactDOM.render(
     <React.StrictMode>
-      <App
-        store={store}
-        state={state}
-        dispatch={store.dispatch.bind(store)} />
+      <StoreContext.Provider value={store}>
+        <App />
+      </StoreContext.Provider>
     </React.StrictMode>,
     document.getElementById('root')
   );
