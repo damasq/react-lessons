@@ -1,0 +1,28 @@
+.navbar {
+  grid-area: nav;
+  background-color: darkcyan;
+  height: 250px;
+}
+
+.links {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.item + .item {
+  margin-top: 10px;
+}
+
+.item:last-child {
+  margin-top: 70px;
+}
+
+.item a{
+  color: white;
+  text-decoration: none;
+}
+
+.item a.active {
+  color: yellow;
+  font-weight: 700;
+}
