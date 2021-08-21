@@ -1,0 +1,19 @@
+.avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.selectedPage {
+  font-weight: bold;
+}
+
+.pageNumbersItem {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.pageNumbers {
+  background-color: #fff;
+  margin: 10px;
+}

@@ -1,7 +1,7 @@
 .navbar {
   grid-area: nav;
   background-color: darkcyan;
-  height: 250px;
+  height: 350px;
 }
 
 .links {

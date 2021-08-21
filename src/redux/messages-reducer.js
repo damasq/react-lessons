@@ -19,7 +19,7 @@ let initialState = {
 }
 
 const messagesReducer = (state = initialState, action) => {
-  let stateCopy;
+  // let stateCopy;
   switch (action.type) {
     case SEND_MESSAGE: {
       let newMessage = {
