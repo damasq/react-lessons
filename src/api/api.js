@@ -15,12 +15,22 @@ export const UsersAPI = {
   },
 
   follow(userId) {
-    debugger
     return instance.post(`follow/${userId}`)
   },
 
   unfollow(userId) {
-    debugger
     return instance.delete(`follow/${userId}`)
+  }
+}
+
+export const ProfileAPI = {
+  getProfile(userId) {
+    return instance.get(`profile/${userId}`)
+  }
+}
+
+export const AuthAPI = {
+  me() {
+    return instance.get(`auth/me`)
   }
 }
