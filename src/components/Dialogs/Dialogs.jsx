@@ -1,17 +1,13 @@
-// import { NavLink } from 'react-router-dom';
 import React from 'react';
-import { sendMessageActionCreater, updateNewMessageTextCreater } from '../../redux/messages-reducer';
+import { Redirect } from 'react-router-dom';
 import styles from './Dialogs.module.css';
 import DialogsItem from './DialogsItem/DialogsItem';
 import Message from './Message/Message';
 
 const Dialogs = (props) => {
-  // debugger;
 
   let dialogsElements = props.dialogs.map(d => <DialogsItem name={d.name} id={d.id} photo={d.photo} />)
   let messagesElements = props.messages.map(m => <Message text={m.message} />)
-
-  // let newMessageElement = React.createRef();
 
   let onSendMessage = () => {
     props.sendMessage();
@@ -21,6 +17,8 @@ const Dialogs = (props) => {
     let message = e.target.value;
     props.updateNewMessageText(message);
   }
+
+  if (!props.isAuth) return <Redirect to='/login' />
 
   return (
     <div className={styles.dialogs}>
