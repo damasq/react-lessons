@@ -1,24 +1,25 @@
 import Preloader from '../../common/Preloader/Preloader';
 import styles from './ProfileInfo.module.css';
+import ProfileStatus from './ProfileStatus';
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
     return <Preloader />
   }
-
+  console.log(props)
   return (
     <div className={styles.wrapper}>
-      <div>
+      {/* <div>
         <img src='https://johnchandlermedia.com/wp-content/uploads/2019/03/Los-Angeles-Wide-Angle-Panorama-1.jpg' />
-      </div>
+      </div> */}
       <div className={styles.profileData}>
         <img className={styles.avatar} src={props.profile.photos.large} />
         <div className={styles.profileDesc}>
           <h2>{props.profile.fullName}</h2>
-
           <p>{props.profile.aboutMe}</p>
         </div>
       </div>
+      <ProfileStatus status={'My new status'} />
     </div>
   );
 }

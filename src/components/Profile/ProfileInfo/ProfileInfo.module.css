@@ -1,5 +1,6 @@
 .wrapper {
   margin-bottom: 40px;
+  padding: 0 10px;
 }
 
 img {
@@ -8,7 +9,6 @@ img {
 
 .profileData {
   display: flex;
-  padding: 0 10px;
 }
 
 .profileDesc {
