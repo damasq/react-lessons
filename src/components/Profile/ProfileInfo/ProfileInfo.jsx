@@ -6,7 +6,7 @@ const ProfileInfo = (props) => {
   if (!props.profile) {
     return <Preloader />
   }
-  console.log(props)
+
   return (
     <div className={styles.wrapper}>
       {/* <div>
@@ -19,7 +19,9 @@ const ProfileInfo = (props) => {
           <p>{props.profile.aboutMe}</p>
         </div>
       </div>
-      <ProfileStatus status={'My new status'} />
+      <ProfileStatus
+        status={props.status}
+        updateUserStatus={props.updateUserStatus} />
     </div>
   );
 }
